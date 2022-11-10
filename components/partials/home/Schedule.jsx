@@ -216,7 +216,7 @@ const Schedule = () => {
                 <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
 
                 <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="#">RSVP FOR THIS EVENT</Link>
+                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797">RSVP FOR THIS EVENT</Link>
                 </span>
               </div>
 
@@ -235,7 +235,7 @@ const Schedule = () => {
                 <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
 
                 <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="#">RSVP FOR THIS EVENT</Link>
+                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797">RSVP FOR THIS EVENT</Link>
                 </span>
               </div>
 
@@ -254,7 +254,7 @@ const Schedule = () => {
                 <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
 
                 <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="#">RSVP FOR THIS EVENT</Link>
+                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797">RSVP FOR THIS EVENT</Link>
                 </span>
               </div>
             </div>
@@ -282,7 +282,7 @@ const Schedule = () => {
                 <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
 
                 <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="#">RSVP FOR THIS EVENT</Link>
+                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797">RSVP FOR THIS EVENT</Link>
                 </span>
               </div>
 
@@ -301,7 +301,7 @@ const Schedule = () => {
                 <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
 
                 <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="#">RSVP FOR THIS EVENT</Link>
+                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797">RSVP FOR THIS EVENT</Link>
                 </span>
               </div>
             </div>
@@ -329,7 +329,7 @@ const Schedule = () => {
                 <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
 
                 <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="#">RSVP FOR THIS EVENT</Link>
+                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797">RSVP FOR THIS EVENT</Link>
                 </span>
               </div>
 
