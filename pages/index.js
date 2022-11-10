@@ -15,9 +15,12 @@ export default function IndexPage() {
   return (
     <SmoothScrollProvider options={
       { smooth: true, getDirection: true }}>
-      {/* <main data-scroll-section><Home /></main> */}
-      <Home />
+      <main data-scroll-section><Home /></main>
     </SmoothScrollProvider>
   )
-  // return <Home />
+  // return (
+  //   <UseEffectScroll>
+  //     <main data-scroll-section><Home /></main>
+  //   </UseEffectScroll>
+  // )
 }

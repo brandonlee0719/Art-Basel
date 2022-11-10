@@ -3,7 +3,7 @@ import { Menus } from "~/constants";
 
 const About = () => {
   return (
-    <section className="relative" id={Menus[3].ref}>
+    <section className="relative z-10" id={Menus[3].ref}>
       <div className="grid grid-flex-row grid-cols-10 bg-black">
         <div className="col-span-5 md:col-span-2">
           <div className="grid grid-flex-row grid-cols-10">
