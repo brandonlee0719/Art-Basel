@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="footer-right">
             <ul className="flex items-center flex-col sm:flex-row sm:space-x-10 lg:justify-start justify-center">
               <li className="mb-4 sm:mb-0"><a href="https://vice-web-statics-cdn.vice.com/privacy-policy/en_us/page/privacy-policy.html" target="_blank">Privacy Policy</a></li>
-              <li><a href="https://www.vicemediagroup.com/" target="_blank"></a>About vice</li>
+              <li className="mb-4 sm:mb-0"><a href="https://www.vicemediagroup.com" target="_blank">About vice</a></li>
             </ul>
 
             <p className="sm:hidden text-center mt-12">
