@@ -17,7 +17,6 @@ export const SmoothScrollProvider = ({ children, options }) => {
   }, [query.section])
 
   useEffect(() => {
-    console.log("scroll=================>", scroll)
     if (!scroll) {
       (async () => {
         try {
