@@ -1,0 +1,323 @@
+@font-face {
+  font-family: "CallEightOT";
+  src: url("CallEightOT.woff2") format("woff2"),
+    url("CallEightOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallEightOT";
+  src: url("CallEightOT-Italic.woff2") format("woff2"),
+    url("CallEightOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallEightNegativeOT";
+  src: url("CallEightNegativeOT.woff2") format("woff2"),
+    url("CallEightNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFiveLOT";
+  src: url("CallFiveLOT.woff2") format("woff2"),
+    url("CallFiveLOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFiveLNegativeOT";
+  src: url("CallFiveLNegativeOT.woff2") format("woff2"),
+    url("CallFiveLNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFiveLOT";
+  src: url("CallFiveLOT-Italic.woff2") format("woff2"),
+    url("CallFiveLOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFiveSNegativeOT";
+  src: url("CallFiveSNegativeOT.woff2") format("woff2"),
+    url("CallFiveSNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFiveSOT";
+  src: url("CallFiveSOT.woff2") format("woff2"),
+    url("CallFiveSOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFiveSOT";
+  src: url("CallFiveSOT-Italic.woff2") format("woff2"),
+    url("CallFiveSOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFourLOT";
+  src: url("CallFourLOT.woff2") format("woff2"),
+    url("CallFourLOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFourLOT";
+  src: url("CallFourLOT-Italic.woff2") format("woff2"),
+    url("CallFourLOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFourLNegativeOT";
+  src: url("CallFourLNegativeOT.woff2") format("woff2"),
+    url("CallFourLNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFourSOT";
+  src: url("CallFourSOT.woff2") format("woff2"),
+    url("CallFourSOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFourSNegativeOT";
+  src: url("CallFourSNegativeOT.woff2") format("woff2"),
+    url("CallFourSNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallFourSOT";
+  src: url("CallFourSOT-Italic.woff2") format("woff2"),
+    url("CallFourSOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallNineLOT";
+  src: url("CallNineLOT.woff2") format("woff2"),
+    url("CallNineLOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallNineLNegativeOT";
+  src: url("CallNineLNegativeOT.woff2") format("woff2"),
+    url("CallNineLNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallNineLOT";
+  src: url("CallNineLOT-Italic.woff2") format("woff2"),
+    url("CallNineLOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallNineSOT";
+  src: url("CallNineSOT.woff2") format("woff2"),
+    url("CallNineSOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallNineSNegativeOT";
+  src: url("CallNineSNegativeOT.woff2") format("woff2"),
+    url("CallNineSNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallNineSOT";
+  src: url("CallNineSOT-Italic.woff2") format("woff2"),
+    url("CallNineSOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallOneOT";
+  src: url("CallOneOT.woff2") format("woff2"),
+    url("CallOneOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallOneNegativeOT";
+  src: url("CallOneNegativeOT.woff2") format("woff2"),
+    url("CallOneNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallOneOT";
+  src: url("CallOneOT-Italic.woff2") format("woff2"),
+    url("CallOneOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallSevenOT";
+  src: url("CallSevenOT.woff2") format("woff2"),
+    url("CallSevenOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallSevenOT";
+  src: url("CallSevenOT-Italic.woff2") format("woff2"),
+    url("CallSevenOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallSevenNegativeOT";
+  src: url("CallSevenNegativeOT.woff2") format("woff2"),
+    url("CallSevenNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallSixOT";
+  src: url("CallSixOT.woff2") format("woff2"),
+    url("CallSixOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallSixOT";
+  src: url("CallSixOT-Italic.woff2") format("woff2"),
+    url("CallSixOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallSixNegativeOT";
+  src: url("CallSixNegativeOT.woff2") format("woff2"),
+    url("CallSixNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallThreeOT";
+  src: url("CallThreeOT.woff2") format("woff2"),
+    url("CallThreeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallThreeOT";
+  src: url("CallThreeOT-Italic.woff2") format("woff2"),
+    url("CallThreeOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallThreeNegativeOT";
+  src: url("CallThreeNegativeOT.woff2") format("woff2"),
+    url("CallThreeNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallTwoNegativeOT";
+  src: url("CallTwoNegativeOT.woff2") format("woff2"),
+    url("CallTwoNegativeOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallTwoOT";
+  src: url("CallTwoOT.woff2") format("woff2"),
+    url("CallTwoOT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CallTwoOT";
+  src: url("CallTwoOT-Italic.woff2") format("woff2"),
+    url("CallTwoOT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}

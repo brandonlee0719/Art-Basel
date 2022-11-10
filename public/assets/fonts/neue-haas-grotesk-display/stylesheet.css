@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std UltTh';
+    src: url('NHaasGroteskDSStd-15UltTh.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-15UltTh.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std UltTh';
+    src: url('NHaasGroteskDSStd-16UltThIt.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-16UltThIt.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std';
+    src: url('NHaasGroteskDSStd-25Th.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-25Th.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std';
+    src: url('NHaasGroteskDSStd-26ThIt.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-26ThIt.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std XLt';
+    src: url('NHaasGroteskDSStd-36XLtIt.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-36XLtIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std XLt';
+    src: url('NHaasGroteskDSStd-35XLt.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-35XLt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std Lt';
+    src: url('NHaasGroteskDSStd-45Lt.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-45Lt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Std';
+    src: url('NHaasGroteskDSStd-46LtIt.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-46LtIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std';
+    src: url('NHaasGroteskDSStd-55Rg.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-55Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std';
+    src: url('NHaasGroteskDSStd-56It.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-56It.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std Md';
+    src: url('NHaasGroteskDSStd-65Md.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-65Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std';
+    src: url('NHaasGroteskDSStd-75Bd.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-75Bd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std Md';
+    src: url('NHaasGroteskDSStd-66MdIt.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-66MdIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std';
+    src: url('NHaasGroteskDSStd-76BdIt.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-76BdIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std Blk';
+    src: url('NHaasGroteskDSStd-95Blk.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-95Blk.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std Blk';
+    src: url('NHaasGroteskDSStd-96BlkIt.woff2') format('woff2'),
+        url('NHaasGroteskDSStd-96BlkIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
