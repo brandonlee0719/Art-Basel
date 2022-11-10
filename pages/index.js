@@ -18,9 +18,4 @@ export default function IndexPage() {
       <main data-scroll-section><Home /></main>
     </SmoothScrollProvider>
   )
-  // return (
-  //   <UseEffectScroll>
-  //     <main data-scroll-section><Home /></main>
-  //   </UseEffectScroll>
-  // )
 }
