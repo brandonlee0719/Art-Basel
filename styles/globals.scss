@@ -64,6 +64,12 @@ body {
     z-index: -1;
   }  
 }
+
+@media(max-width: 767px) { 
+  #__next {
+    overflow: hidden;
+  }
+}
 // #__next {
 //   overflow: hidden;
 // }

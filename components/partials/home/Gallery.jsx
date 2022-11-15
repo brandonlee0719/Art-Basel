@@ -176,7 +176,7 @@ const Gallery = () => {
             </h2>
 
             <h2 className="font-bold text-xl md:text-3xl 2xl:text-4xl 3xl:text-5xl text-dark lg:mr-32">
-              What's next? Hang out with VICE and a community of creators, artists and musicians as we forecast the future of this boundary-pushing art form. Plus performances, parties, food, music, talks & more
+              What's next? Hang out with VICE and a community of creators, artists and musicians as we forecast the future of this boundary-pushing art form. Plus performances, parties, food, music, talks & more.
             </h2>
           </div>
         </div>

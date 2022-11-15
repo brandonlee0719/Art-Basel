@@ -1,8 +1,26 @@
+import { useContext, useEffect, useRef } from "react";
+import { useIntersectionObserver } from "usehooks-ts";
+
 import Accordion from "~/components/features/Accordion";
 import LetterSplit from "~/components/features/LetterSplit";
 import { Menus } from "~/constants";
+import { SmoothScrollContext } from "~/src/contexts/SmoothScrollContext";
 
 const Faqs = () => {
+  const ref = useRef(null);
+  const {scroll} = useContext(SmoothScrollContext);
+  const entry = useIntersectionObserver(ref, {});
+  const isVisible = !!entry?.isIntersecting;
+
+  useEffect(()=> {
+    if(isVisible) {
+      setTimeout(() => {
+        scroll && scroll.update();
+        console.log("Fixing the issues");
+      }, 300);
+    }
+  }, [isVisible])
+
   const data = [
     {
       title: "WHERE AND WHEN IS NOT A TEST?",
@@ -59,7 +77,7 @@ const Faqs = () => {
   ]
 
   return (
-    <section className="relative z-10 faqs bg-white" id={Menus[2].ref}>
+    <section className="relative z-10 faqs bg-white" id={Menus[2].ref} ref={ref}>
       <div className="grid grid-flex-row grid-cols-10">
         <div className="col-span-2 hidden lg:block"></div>
 

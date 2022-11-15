@@ -1,16 +1,23 @@
 import gsap, { Linear, Power3 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import { Menus } from "~/constants";
 import LetterSplit from "~/components/features/LetterSplit";
+import { SmoothScrollContext } from "~/src/contexts/SmoothScrollContext";
 
 const Schedule = () => {
   gsap.registerPlugin(ScrollTrigger);
+  const {scroll} = useContext(SmoothScrollContext);
   const schedule = useRef(null);
   const tab = useRef(null);
+
+  useEffect(()=> {
+    const q = gsap.utils.selector(schedule.current);
+    gsap.set(q(".blue, .green"), {display: "none"});
+  }, [])
 
   const colorChangeHandler = (e, obj) => {
     e.preventDefault();
@@ -18,6 +25,8 @@ const Schedule = () => {
     e.currentTarget.classList.add("active");
     const q = gsap.utils.selector(schedule.current);
     const tl = gsap.timeline();
+
+    tl.set(q(`.event`), {display: "none"}).set(q(`.${obj.name}`), {display: "flex"});
     
     if(obj.name == "blue") {
       tl.to(q(".bg-yellow"), {
@@ -38,6 +47,10 @@ const Schedule = () => {
         ease: Power3.ease,
       }, ">-0.5");
     }
+
+    setTimeout(() => {
+      scroll && scroll.update();
+    }, 500);
   };
 
   return (
@@ -201,60 +214,131 @@ const Schedule = () => {
             </h3>
 
             <div className="grid grid-flex-row grid-cols-8 md:border-b border-black">
-              <div className="col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5">
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event yellow">
                 <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
                   <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
                       Main clubhouse
                   </h3>
-                  <span className="mr-4 text-black">03:00pm - 04:00pm</span>
+                  <span className="mr-4 text-black">3 - 4pm</span>
                 </div>
                 
                 <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
-                  “WOMEN IN THE MOVEMENT” 
+                  WOMEN IN THE MOVEMENT
                 </p>
 
-                <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
-
-                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797" target="_blank">RSVP FOR THIS EVENT</Link>
+                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1 mt-auto">
+                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797" target="_blank">TICKETS COMING SOON</Link>
                 </span>
               </div>
 
-              <div className="col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5">
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event yellow">
                 <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
                   <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
                       Main clubhouse
                   </h3>
-                  <span className="mr-4 text-black">03:00pm - 04:00pm</span>
+                  <span className="mr-4 text-black">5 - 6pm0</span>
                 </div>
                 
                 <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
-                  “WOMEN IN THE MOVEMENT” 
-                </p>
+                  NOISEY Artist Interview 
+                </p> 
 
-                <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
-
-                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797" target="_blank">RSVP FOR THIS EVENT</Link>
+                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1 mt-auto">
+                  <Link href="https://www.eventbrite.com/e/noisey-artist-interview-tickets-464570331367" target="_blank">TICKETS COMING SOON</Link>
                 </span>
               </div>
 
-              <div className="col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5">
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event yellow">
                 <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
                   <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
                       Main clubhouse
                   </h3>
-                  <span className="mr-4 text-black">03:00pm - 04:00pm</span>
+                  <span className="mr-4 text-black">9p - 11pm</span>
                 </div>
                 
                 <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
-                  “WOMEN IN THE MOVEMENT” 
+                  VICE x Art Basel Miami Beach VIP Opening Night with Donovan's Yard 
+                </p> 
+              </div>
+
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event blue ">
+                <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
+                  <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
+                      Main clubhouse
+                  </h3>
+                  <span className="mr-4 text-black">3 - 4pm</span>
+                </div>
+                
+                <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
+                  BLACK POWER KITCHEN: Kimberly Drew in conversation with Ghetto Gastro 
                 </p>
 
-                <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
+                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1 mt-auto">
+                  <Link href="https://www.eventbrite.com/e/black-power-kitchen-kimberly-drew-in-conversation-with-ghetto-gastro-tickets-463914369367" target="_blank">TICKETS COMING SOON</Link>
+                </span>
+              </div>
 
-                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797" target="_blank">RSVP FOR THIS EVENT</Link>
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event blue">
+                <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
+                  <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
+                      Main clubhouse
+                  </h3>
+                  <span className="mr-4 text-black">5 - 6pm</span>
+                </div>
+                
+                <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
+                  Expedia Listening Session 
+                </p>
+
+                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1 mt-auto">
+                  <Link href="https://www.eventbrite.com/e/expedia-listening-session-tickets-464657191167" target="_blank">TICKETS COMING SOON</Link>
+                </span>
+              </div>
+
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event blue">
+                <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
+                  <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
+                      Main clubhouse
+                  </h3>
+                  <span className="mr-4 text-black">6pm</span>
+                </div>
+                
+                <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
+                  Expedia VIP Cocktail Reception 
+                </p> 
+              </div>
+
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event green ">
+                <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
+                  <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
+                      Main clubhouse
+                  </h3>
+                  <span className="mr-4 text-black">3 - 4pm</span>
+                </div>
+                
+                <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
+                  Styling Hip-Hop 
+                </p> 
+
+                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1 mt-auto">
+                  <Link href="https://www.eventbrite.com/e/styling-hip-hop-tickets-463959213497" target="_blank">TICKETS COMING SOON</Link>
+                </span>
+              </div>
+
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event green">
+                <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
+                  <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
+                      Main clubhouse
+                  </h3>
+                  <span className="mr-4 text-black">5 - 6pm</span>
+                </div>
+                
+                <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
+                  NOISEY Artist Interview with They Hate Change
+                </p> 
+
+                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1 mt-auto">
+                  <Link href="https://www.eventbrite.com/e/noisey-artist-interview-with-they-hate-change-tickets-463968421037" target="_blank">TICKETS COMING SOON</Link>
                 </span>
               </div>
             </div>
@@ -267,41 +351,50 @@ const Schedule = () => {
             </h3>
 
             <div className="grid grid-flex-row grid-cols-8">
-              <div className="col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5">
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5">
                 <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
                   <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
                     THE YARD
                   </h3>
-                  <span className="mr-4 text-black">03:00pm - 04:00pm</span>
+                  <span className="mr-4 text-black">1 - 7pm</span>
+                </div>
+                
+                <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6"> 
+                  NOISEY DJ SETS IN THE YARD
+                </p>
+              </div>
+
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event blue">
+                <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
+                  <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
+                    THE YARD
+                  </h3>
+                  <span className="mr-4 text-black">8 - 11pm</span>
                 </div>
                 
                 <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
-                  “WOMEN IN THE MOVEMENT” 
+                  The Immeasurable Influence of African Music 
                 </p>
 
-                <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
-
-                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797" target="_blank">RSVP FOR THIS EVENT</Link>
+                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1 mt-auto">
+                  <Link href="https://www.eventbrite.com/e/the-immeasurable-influence-of-african-music-tickets-464340443767"target="_blank">TICKETS COMING SOON</Link>
                 </span>
               </div>
 
-              <div className="col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5">
+              <div className="flex flex-col col-span-8 sm:col-span-4 xl:col-span-2 pb-10 sm:pb-16 sm:pr-5 event green">
                 <div className="mb-6 md:mb-3 text-xs lg:text-base uppercase">
                   <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
                     THE YARD
                   </h3>
-                  <span className="mr-4 text-black">03:00pm - 04:00pm</span>
+                  <span className="mr-4 text-black">8 - 11pm</span>
                 </div>
                 
                 <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
-                  “WOMEN IN THE MOVEMENT” 
+                  Architects of Art & Sound
                 </p>
 
-                <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
-
-                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797" target="_blank">RSVP FOR THIS EVENT</Link>
+                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1 mt-auto">
+                  <Link href="https://www.eventbrite.com/e/architects-of-art-sound-tickets-464321677637"target="_blank">TICKETS COMING SOON</Link>
                 </span>
               </div>
             </div>
@@ -319,18 +412,12 @@ const Schedule = () => {
                   <h3 className="text-xl lg:text-2xl text-black uppercase font-bold md:hidden mb-1">
                     Rum Room
                   </h3>
-                  <span className="mr-4 text-black">03:00pm - 04:00pm</span>
+                  <span className="mr-4 text-black">ALWAYS ON</span>
                 </div>
                 
                 <p className="font-bold font-neue text-md md:text-xl text-black uppercase mb-3 md:mb-6">
-                  “WOMEN IN THE MOVEMENT” 
+                  “TIMEBOY'S INFLECTION” 
                 </p>
-
-                <p className="font-neue font-bold uppercase text-black leading-7 text-md mb-6 md:mb-12">Kimberly Drew in conversation<br /> with TBD (Aya Brown, Suzi<br /> Analogue, Jody Simms)</p>
-
-                <span className="text-black font-callEightNegativeOT leading-5 mr-4 text-sm inline-block px-1">
-                  <Link href="https://www.eventbrite.com/e/women-in-the-movement-kimberly-drew-in-conversation-with-tbd-tickets-463733638797" target="_blank">RSVP FOR THIS EVENT</Link>
-                </span>
               </div>
 
               <div className="col-span-4 md:col-span-2 pt-[100%] xl:block hidden"></div>

@@ -39,7 +39,7 @@ const Accordion = ({ accordionData })=> {
     const isActive =()=> {
         setTimeout(() => {
             scroll && scroll.update();
-        }, 300);
+        }, 500);
     }
 
     return <div className="accordion">

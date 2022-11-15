@@ -142,7 +142,7 @@ const Header = () => {
                 key={index}
               >
                 <div className={`pt-1 text-xs lg:text-sm uppercase text-black`}>
-                  Buy Tickets Now
+                  Tickets Coming Soon
                 </div>
                 <svg
                   className="mx-3"
@@ -159,7 +159,7 @@ const Header = () => {
                 </svg>
 
                 <div className={`pt-1 text-xs lg:text-smX uppercase text-black font-callEightNegativeOT`}>
-                  Buy Tickets Now
+                  Tickets Coming Soon
                 </div>
 
                 <svg

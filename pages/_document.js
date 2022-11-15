@@ -4,8 +4,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="manifest" href="/manifest.json" />
+          {/* <link rel="manifest" href="/manifest.json" /> */}
           <link rel="apple-touch-icon" href="/icon.png" />
+          <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" httpEquiv="Content-Type" />
           {/* <link
             rel="stylesheet"
             data-href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700"

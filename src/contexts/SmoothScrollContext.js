@@ -15,6 +15,9 @@ export const SmoothScrollProvider = ({ children, options }) => {
       scroll && scroll.scrollTo(`#${query.section}`);
     }
   }, [query.section])
+  // 
+
+  // scroll && scroll.on('scroll', ()=> {scroll.update()})
 
   useEffect(() => {
     if (!scroll) {

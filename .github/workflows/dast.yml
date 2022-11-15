@@ -1,0 +1,69 @@
+name: DAST
+
+# The following indicates when ZAP will run. ZAP runs everytime code is pushed to the main or development branches or a pull request is 
+# merged to the main or development branches.
+on:
+  push:
+    branches: [ main, master, develop, dev ]
+  pull_request:
+    branches: [ main, master, develop, dev ]
+  
+  # This extra condition allows a user to run this action for the Actions > All workflows > DAST > Run workflow button.
+  workflow_dispatch:
+  
+  #Actions can be scheduled as well, below we are running this workflow every 4 months or 3 times a year.
+  schedule:
+    - cron: '0 0 1 */4 *'
+
+jobs:
+  zap-full-scan:
+        name: ZAP Full Scan
+        runs-on: ubuntu-latest
+        env:
+          DAST_WEB_URL: ${{ secrets.DAST_WEB_URL }}
+        steps:
+          # This steps prints out the public IP address used by the Github action to run ZAP. This is so we can identify 
+          # our own traffic.
+          - name: Print Pubic IP Address
+            run: echo "$(curl ifconfig.me)"
+          
+          # If the 'DAST_WEB_URL' secret is detected, ZAP will run a full scan on that URL.
+          # A sarif file is generated then uploaded back to Github
+          - name: ZAP scan step
+            if: env.DAST_WEB_URL != null
+            uses: zaproxy/action-full-scan@v0.3.0
+            with:
+              target: '${{ env.DAST_WEB_URL }}'
+              allow_issue_writing: false
+              # the below cmd replaces the User-Agent request http header to 'Zapped by the VICE InfoSec Team' so we can 
+              # even further identify our own traffic.
+              cmd_options: >
+                -j -z "-config replacer.full_list(0).description=ReplaceUA 
+                -config replacer.full_list(0).enabled=true 
+                -config replacer.full_list(0).matchtype=REQ_HEADER 
+                -config replacer.full_list(0).matchstr=User-Agent 
+                -config replacer.full_list(0).regex=false 
+                -config replacer.full_list(0).replacement=Zapped\ by\ the\ VICE\ InfoSec\ Team"             
+          
+          # If the scan runs create a sarif file
+          - name: Create sarif file for ZAP results
+            if: env.DAST_WEB_URL != null
+            uses: SvanBoxel/zaproxy-to-ghas@main
+          
+          # The sarif file is uploaded into Github to be viewed in the Github Security Tab
+          - name: Upload SARIF file
+            if: env.DAST_WEB_URL != null
+            uses: github/codeql-action/upload-sarif@v2
+            with:
+              sarif_file: results.sarif
+          
+          # This step fails the run if the secret 'DAST_WEB_URL' is not detected. The user is referred to the documentation on 
+          # how to create the 'DAST_WEB_URL' secret in the error message.
+          - name: Fail ZAP scan
+            if: env.DAST_WEB_URL == null
+            uses: actions/github-script@v6
+            with:
+              script: > 
+                core.setFailed('file=/.github/workflows/dast.yml,line=21,col=10,endColumn=45 DAST_WEB_URL does not exist. 
+                Please refer to our docs https://github.com/VICEMedia/infosec/wiki/OWASP-ZAP-for-DAST#dast_url-does-not-exist')
+                

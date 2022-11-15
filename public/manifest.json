@@ -1,0 +1,4 @@
+{
+    "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+    "X-Content-Type-Options": "nosniff"
+}

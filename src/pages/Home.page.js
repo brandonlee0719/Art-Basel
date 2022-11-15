@@ -9,11 +9,11 @@ import Talent from '~/components/partials/home/Talent'
 export default function Home() {
 
 
-  return (
-    <>
+    return (
+      <>
       <Intro />
       <Gallery />
-
+      
       <section>
         <div className="grid grid-flex-row grid-cols-10">
           <div className="col-span-10 md:col-span-4 bg-white flex items-center pb-7 md:pb-0">
@@ -56,13 +56,13 @@ export default function Home() {
 
           <div className="col-span-5 md:col-span-2 hidden md:block">
             <div className="relative media bg-black flex items-center justify-start pt-[100%]">
-
+              
             </div>
           </div>
 
           <div className="col-span-2 hidden md:block">
             <div className="relative media bg-white flex items-center justify-start pt-[100%]">
-              <img className='absolute top-0 left-0 mx-12' src='./assets/images/plus-black-icon.svg' alt='icon' />
+              <img className='absolute top-0 left-0 mx-12' src='./assets/images/plus-black-icon.svg' alt='icon'/>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ export default function Home() {
           <div className="col-span-2 hidden md:block">
             <div className="relative media bg-black flex items-center justify-start  pt-[100%]">
               <div className="absolute left-0 top-1/2 -translate-y-1/2">
-                <img className='absolute top-0 -left-24' src='./assets/images/plus-icon.svg' alt='icon' />
+                <img className='absolute top-0 -left-24' src='./assets/images/plus-icon.svg' alt='icon'/>
 
                 <p className="font-callEightNegativeOT leading-5  mb-1 text-xs lg:text-sm">
                   VICE @ ART BASEL,<br /> MIAMI BEACH
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="col-span-10 md:col-span-6 order-1 md:order-2 px-6 md:px-0 pt-16 md:pt-0 pb-20 md:pb-48">
+          <div className="col-span-10 md:col-span-6 order-1 md:order-2 px-6 md:px-0 pt-16 md:pt-0 pb-20 md:pb-28">
             <h2 className="font-bold text-xl lg:text-3xl md:mr-32 mb-10">
               VICE is taking over the historic Carl Fisher Clubhouse (centrally located next to the Art Basel Miami Beach Convention Center) for a 72-hour residency.
             </h2>
@@ -111,11 +111,11 @@ export default function Home() {
             </h2>
 
             <h2 className="font-bold text-xl lg:text-3xl md:mr-32 mb-10">
-              In The Yard, join NOISEY for afternoon DJ sets and evening showcases from Donovan’s Yard, Uncle Waffles, JPEGMafia, and more.
+              In The Yard, join NOISEY for afternoon DJ sets and evening showcases from Donovan’s Yard, Uncle Waffles, and more. 
             </h2>
 
             <h2 className="font-bold text-xl lg:text-3xl md:mr-32">
-              In Inflection,a multimedia installation and immersive group experience, visual artist and composer Time Boy explores the concept of pressure on Hip-Hop’s originators and present day creators and how it results in innovation in the genre, culture and beyond.
+              In Inflection, a multimedia installation and immersive group experience, visual artist and composer Time Boy explores the concept of pressure on Hip-Hop’s originators and present day creators and how it results in innovation in the genre, culture and beyond.
             </h2>
           </div>
         </div>
@@ -169,6 +169,6 @@ export default function Home() {
       <Faqs />
       <About />
       <Footer />
-    </>
+      </>
   )
 }
